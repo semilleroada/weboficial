@@ -1,0 +1,171 @@
+/*
+
+Proyecto: Página Web de la Institución Educativa Comfacor;
+Hoja de Estilos de la Página Principal;
+Autor: Andrés Felipe Esala Muñoz y Andrés Felipe Suárez González;
+
+*/
+
+/* Estilos Globales */
+html{
+	box-sizing: border-box;
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+ul{
+	list-style: none;
+}
+
+/* Header */
+header{
+	width: 100%;
+	padding: 2px 10px;
+	position: absolute;
+	background-color: #00AE9D;
+}
+header .main-nav{
+	width: 98%;
+	padding: auto;
+}
+
+/* Nombre del Sitio Web */
+header .name-site a{
+	float: left;
+	color: #FFA500;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0px 0px 0px 15px; 
+	text-transform: uppercase;
+}
+header .name-site a:hover{
+	text-decoration: none;
+}
+
+/* Menu Principal */
+header .sub-ul{
+	display: none;
+	padding: 5px;
+	margin: 5px 0px 0px 0px;
+}
+ header .sub-ul li{
+	display: block;
+	margin-bottom: 5px;
+}
+header .sub-ul li a{
+	display: inline-block;
+  	padding: 8px 15px;
+  	color: white;
+}
+header .sub-ul li a:hover{
+	text-decoration: none;
+  	background-color: #00D6CD;
+
+  	transition: all 0.5s ease;
+} 
+
+
+/* Responsive Web Design del Menu Principal */
+@media only screen and (min-width: 768px){
+	header .main-nav .sub-ul{
+		float: left;
+		padding: 0;
+		margin: 0;
+		margin-top: -46px;
+		margin-left: 275px;
+		display: inline-block !important;
+		justify-content: space-around;
+	}
+	header .sub-ul li{
+		margin: 5px;
+		display: inline-block;
+	}
+	header .sub-ul li a{
+		display: inline-block; 
+	}
+}
+
+/* Áreas y/o Asignaturas */
+div.areas{
+	top: 36%;
+	width: 100%;
+	display: none;
+	position: absolute;
+	background-color: #00AE9D;
+	justify-content: space-around;
+}
+div.areas ul{
+	width: 98%;
+	margin: 5px auto;
+}
+div.areas ul li{
+	width: 30%;
+	list-style: none;
+	text-align: center;
+	display: inline-block;
+}
+div.areas li a{
+	width: 100%;
+	color: white;
+	padding: 5px 10px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	text-decoration: none;
+	display: inline-block;
+	border: 1px solid black;
+}
+div.areas li a:hover{
+	background-color: #00F4C0;
+
+	transition: all 0.3s ease;
+}
+
+
+@media only screen and (min-width: 768px){
+	div.areas{
+		top: 50px;
+	}
+	div.areas ul{
+		width: 96%;
+		margin: 10px auto;
+	}
+}
+
+
+/* Menu Movil */
+header .movil-nav{
+	width: 45px;
+	height: 40px;
+	display: block;
+	padding: 6px;
+	float: right;
+	margin-top: 2px;
+	text-align: right;
+	border: 2px solid white;
+	border-radius: 5px;
+}
+header .movil-nav span{
+	height: 2px;
+	margin-top: 5px;
+	background-color: white;
+	display: block;
+}
+header .movil-nav span:first-child{
+	margin-top: 4px;
+}
+header .movil-nav:hover{
+	cursor: pointer;
+}
+@media only screen and (min-width: 768px){
+	header .movil-nav{
+		display: none;
+	}
+}
